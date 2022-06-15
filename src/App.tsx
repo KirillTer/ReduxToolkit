@@ -20,7 +20,7 @@ function App() {
       <h3>{JSON.stringify(users, null, 2)}</h3> */}
       <div style={{ display: 'flex' }}>
         <PostContainer />
-        <PostContainerOld />
+        {/* <PostContainerOld /> */}
       </div>
     </div>
   );

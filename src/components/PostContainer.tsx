@@ -4,13 +4,14 @@ import PostItem from "./PostItem";
 import { IPost } from "../models/IPost";
 
 const PostContainer = () => {
-  const [limit, setLimit] = useState(100);
+  const [limit, setLimit] = useState(10);
   const {
     data: posts,
     error,
     isLoading,
     refetch,
   } = postAPI.useFetchAllPostsQuery(limit);
+
   const [createPost, {}] = postAPI.useCreatePostMutation();
   const [updatePost, {}] = postAPI.useUpdatePostMutation();
   const [deletePost, {}] = postAPI.useDeletePostMutation();
@@ -38,7 +39,7 @@ const PostContainer = () => {
     <div>
       <div className="post__list">
         <button onClick={handleCreate}>Add new post</button>
-        <button onClick={refetch}>Refetch</button>
+        <button onClick={() => refetch()}>Refetch</button>
         {isLoading && <h1>Loading...</h1>}
         {error && <h1>Error</h1>}
         {posts &&

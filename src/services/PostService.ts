@@ -3,7 +3,7 @@ import { IPost } from "../models/IPost";
 
 export const postAPI = createApi({
   reducerPath: "postAPI",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001" }),
   // baseQuery: fetchBaseQuery({
   //   baseUrl: "https://jsonplaceholder.typicode.com",
   // }),

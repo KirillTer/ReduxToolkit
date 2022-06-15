@@ -1,53 +1,43 @@
 {
   "posts": [
     {
-      "id": 5,
-      "title": "json-server 5",
-      "body": "typicode"
-    },
-    {
-      "id": 8,
-      "title": "json-server 8",
-      "body": "typicode"
-    },
-    {
-      "id": 9,
-      "title": "json-server 9",
-      "body": "typicode"
-    },
-    {
       "id": 10,
-      "title": "json-server 10",
+      "title": "json-server 1",
       "body": "typicode"
     },
     {
-      "id": 11,
-      "title": "json-server 11",
-      "body": "typicode"
-    },
-    {
-      "title": "123123",
-      "body": "123123",
+      "title": "json-server 2",
+      "body": "json-server 2",
       "id": 12
     },
     {
-      "title": "NEW POST",
-      "body": "NEW POST",
+      "title": "json-server 3",
+      "body": "json-server 3",
+      "id": 13
+    },
+    {
+      "title": "json-server 4",
+      "body": "json-server 4",
       "id": 14
     },
     {
-      "title": "123123",
-      "body": "123123",
+      "title": "json-server 5",
+      "body": "json-server 5",
+      "id": 15
+    },
+    {
+      "title": "json-server 6",
+      "body": "json-server 6",
       "id": 16
     },
     {
-      "title": "111",
-      "body": "111",
+      "title": "json-server 7",
+      "body": "json-server 7",
       "id": 17
     },
     {
-      "title": "222",
-      "body": "222",
+      "title": "json-server 8",
+      "body": "json-server 8",
       "id": 18
     }
   ],
