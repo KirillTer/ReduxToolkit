@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
 import './App.css';
-import { fetchUsers } from './store/reducers/ActionCreators';
-import { useAppDispatch, useAppSelector } from './hooks/redux'
+// import { fetchUsers } from './store/reducers/ActionCreators';
+// import { useAppDispatch, useAppSelector } from './hooks/redux'
 import PostContainer from "./components/PostContainer";
-import PostContainerOld from "./components/PostContainerOld";
+// import PostContainerOld from "./components/PostContainerOld";
 
 function App() {
-  const dispatch = useAppDispatch();
-  const { users, isLoading, error } = useAppSelector(state => state.userReducer);
+  // const dispatch = useAppDispatch();
+  // const { users, isLoading, error } = useAppSelector(state => state.userReducer);
   
-  useEffect(() => {
-    dispatch(fetchUsers());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchUsers());
+  // }, [dispatch]);
 
   return (
     <div className="App">
