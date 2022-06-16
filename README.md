@@ -13,3 +13,7 @@ Runs the json-server in watch mode.\
 Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 Simple web server with CRUD operations for posts
+
+### `npm dev`
+
+Runs both commands: start + json-server
