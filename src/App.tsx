@@ -2,7 +2,7 @@
 import './App.css';
 // import { fetchUsers } from './store/reducers/ActionCreators';
 // import { useAppDispatch, useAppSelector } from './hooks/redux'
-import PostContainer from "./components/PostContainer";
+import PostContainer from "./components/Post/PostContainer";
 // import PostContainerOld from "./components/PostContainerOld";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       {/* {isLoading && <h1>Loading...</h1>}
       {error && <h1>{error}</h1>}
       <h3>{JSON.stringify(users, null, 2)}</h3> */}
-      <div style={{ display: 'flex' }}>
+      <div>
         <PostContainer />
         {/* <PostContainerOld /> */}
       </div>

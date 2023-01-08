@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { IPost } from "../models/IPost";
-
+import { IPost } from "../../models/IPost";
+import { Button } from 'antd';
 
 interface PostItemProps {
   post: IPost;
@@ -21,9 +21,12 @@ const PostItem: FC<PostItemProps> = ({ post, remove, update }) => {
   }
 
   return (
-    <div className="post" onClick={handleUpdate}>
-      {post.id}. {post.title}
-      <button onClick={handleRemove}>Delete</button>
+    <div className="postItem" onClick={handleUpdate}>
+      <div className="postItem_header">
+        {post.id}. {post.title}
+        <Button type="primary" danger onClick={handleRemove}>Delete</Button>
+      </div>
+      <div>{post.body}</div>
     </div>
   );
 };

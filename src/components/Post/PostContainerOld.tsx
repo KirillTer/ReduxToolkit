@@ -1,5 +1,5 @@
 import React from 'react';
-import { postAPI } from "../services/PostService";
+import { postAPI } from "../../services/PostService";
 import PostItem from "./PostItem";
 
 const PostContainerOld = () => {
