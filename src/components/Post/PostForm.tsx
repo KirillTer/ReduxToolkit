@@ -3,9 +3,10 @@ import { Button, Form, Input } from 'antd';
 
 interface PostFormProps {
   createNewPost: (post: any) => void;
+  showModalForm: (val: boolean) => void;
 }
 
-const PostForm: FC<PostFormProps> = ({ createNewPost }) => {
+const PostForm: FC<PostFormProps> = ({ createNewPost, showModalForm }) => {
 
   const [form] = Form.useForm();
   const [post, setPost] = useState({title: '', body: ''});
@@ -14,6 +15,7 @@ const PostForm: FC<PostFormProps> = ({ createNewPost }) => {
     createNewPost(post);
     setPost({title: '', body: ''});
     form.resetFields();
+    showModalForm(false);
   }
 
   return (

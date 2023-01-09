@@ -9,7 +9,7 @@ const PostSelect: FC<PostSelectProps> = ({selectPosts}) => {
   return ( 
     <Select
       defaultValue="title"
-      style={{ width: 220 }}
+      style={{ width: 300 }}
       onChange={selectPosts}
       options={[
         {
