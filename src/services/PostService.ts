@@ -9,11 +9,12 @@ export const postAPI = createApi({
   // }),
   tagTypes: ["Post"],
   endpoints: (build) => ({
-    fetchAllPosts: build.query<IPost[], number>({
-      query: (limit: number = 5) => ({
+    fetchAllPosts: build.query<IPost[], any>({
+      query: (reqParams: any = {limit: 10, page: 1}) => ({
         url: `/posts`,
         params: {
-          _limit: limit,
+          _limit: reqParams.limit,
+          _page: reqParams.page,
         },
       }),
       providesTags: (result) => ["Post"],
