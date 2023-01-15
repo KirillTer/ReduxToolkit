@@ -23,7 +23,7 @@ const PostModal: React.FC<PostModalProps> = ({createNewPost}) => {
 
   return (
     <>
-      <Button type="primary" onClick={showModal}>
+      <Button type="primary" onClick={showModal} style={{'margin': '20px'}}>
         Create new post
       </Button>
       <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>

@@ -30,7 +30,7 @@ const Navbar = () => {
         <Menu
           theme='dark'
           mode="horizontal"
-          defaultSelectedKeys={location.pathname.localeCompare(RouteNames.HOME) ? [RouteNames.POSTS] : [location.pathname]}
+          defaultSelectedKeys={location.pathname === RouteNames.HOME ? [RouteNames.POSTS] : [location.pathname]}
           items={menuItems}
         />
       </Header>

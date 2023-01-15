@@ -25,7 +25,7 @@ const PostFilter: FC<PostFilterProps> = ({ posts, handleFilter }) => {
   }
 
   return ( 
-    <div style={{display: 'flex', justifyContent: 'space-around'}}>
+    <div style={{display: 'flex', justifyContent: 'space-around',  'margin': '20px 0 0 0'}}>
       <PostSelect selectPosts={handleSelect}/>
       <Input style={{ width: 300 }} value={searchQuery} onChange={e => setSearchQuery(e.target.value)} placeholder='Search'/>
     </div>

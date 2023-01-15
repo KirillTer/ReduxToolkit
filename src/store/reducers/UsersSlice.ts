@@ -2,16 +2,21 @@ import { IUser } from '../../models/IUser';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { fetchUsers } from './ActionCreators';
 
+interface Responce {
+  data: IUser[];
+  headers: any;
+}
+
 interface UserState {
-  users: IUser[];
+  resp: Responce;
   isLoading: boolean;
   error: string;
 }
 
 const initialState: UserState = {
-  users: [],
   isLoading: false,
   error: '',
+  resp: {data: [], headers: {}},
 }
 
 export const userSlice = createSlice({
@@ -35,10 +40,11 @@ export const userSlice = createSlice({
     [fetchUsers.pending.type]: (state) => {
       state.isLoading = true;
     },
-    [fetchUsers.fulfilled.type]: (state, action: PayloadAction<IUser[]>) => {
+    [fetchUsers.fulfilled.type]: (state, action: PayloadAction<Responce>) => {
       state.isLoading = false;
       state.error = "";
-      state.users = action.payload;
+      state.resp.data = action.payload.data;
+      state.resp.headers = action.payload.headers;
     },
     [fetchUsers.rejected.type]: (state, action: PayloadAction<string>) => {
       state.isLoading = false;

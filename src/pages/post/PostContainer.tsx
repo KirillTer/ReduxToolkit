@@ -40,10 +40,10 @@ const PostContainer = () => {
 
   return (
     <div>
-      <PostModal createNewPost={handleCreate}/>
       <PostFilter posts={posts as []} handleFilter={setSelectedSortedPosts}/>
       <div className="post__list">
         <Button type="primary" onClick={() => refetch()}>Refetch</Button>
+        <PostModal createNewPost={handleCreate}/>
         <h1 >Posts list</h1>
         {isLoading && <h1>Loading...</h1>}
         {error && <h1>Error</h1>}

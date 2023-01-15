@@ -2,7 +2,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "../App";
 import PostContainer from "../pages/post/PostContainer";
 // import PostContainerOld from "./components/PostContainerOld";
-import UserContainer from "../pages/user/UserContainer";
+import UserContainer from "../pages/user/Users";
+import UserDetails from "../pages/user/UserDetails";
 import ErrorContainer from "../pages/error/ErrorContainer";
 
 export enum RouteNames {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: RouteNames.USERS,
         element: <UserContainer />
+      },
+      {
+        path: RouteNames.USERDETAILS,
+        element: <UserDetails />
       },
     ],
   }
